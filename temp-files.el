@@ -1,7 +1,7 @@
 ;; Put autosave files (ie #foo#) in one place, *not*
 ;; scattered all over the file system!
-(defvar autosave-dir (concat "/Users/Roxxi" "/.emacs_autosave/"))
-(defvar backup-dir (concat "/Users/Roxxi" "/.emacs_backups/"))
+(defvar autosave-dir (concat "~/.emacs_autosave/"))
+(defvar backup-dir (concat "~/.emacs_backups/"))
 
 (make-directory autosave-dir t)
 
