@@ -64,6 +64,7 @@
 ;; show me what I'm marking
 ;;
 (setq show-paren-mode t)
+(show-paren-mode t)
 (setq size-indication-mode t)
 (setq text-mode-hook (quote (text-mode-hook-identify)))
 ;;
