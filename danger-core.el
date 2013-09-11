@@ -51,7 +51,6 @@
 
 (setq column-number-mode t)
 (setq delete-selection-mode t)
-(setq global-whitespace-mode t)
 (setq global-hl-line-mode nil)
 (setq erc-modules
       (quote
@@ -73,6 +72,7 @@
 (setq transient-mark-mode t)
 (setq visible-cursor t)
 ;; enables the indication of whitespace
+(setq global-whitespace-mode t)
 (global-whitespace-mode t)
 (setq whitespace-style
       ;; turn off showing the following characters
