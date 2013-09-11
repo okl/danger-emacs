@@ -73,7 +73,7 @@
 (setq transient-mark-mode t)
 (setq visible-cursor t)
 ;; enables the indication of whitespace
-(setq global-whitespace-mode t)
+(global-whitespace-mode t)
 (setq whitespace-style
       ;; turn off showing the following characters
       (quote
