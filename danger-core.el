@@ -11,6 +11,12 @@
 (bar-cursor-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Saveplace --  automatically save place in files
+(require 'saveplace)
+(setq save-place-file "~/.emacs.d/saved-places")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Specify a new place to store temp files to avoid cluttering up your workspace
 (require 'temp-files)
 
@@ -20,6 +26,19 @@
 (global-set-key "\C-c'" 'uncomment-region)
 (global-set-key "\C-x\C-a" 'find-file-at-point)
 (global-set-key [(control shift ?s)] 'list-matching-lines)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Packages for Emacs
+;;; You can make use of this by doing `M-x package-install [RET] nrepl [RET]`
+;;; You can update your package list by `M-x package-refresh-contents [RET]`
+;;;
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 
 
 
@@ -41,7 +60,6 @@
                  networks noncommands readonly ring services stamp track)))
 (setq indent-tabs-mode nil)
 (setq inhibit-startup-screen t)
-(setq save-place t nil (saveplace))
 (setq scroll-bar-mode (quote right))
 ;;
 ;; show me what I'm marking
@@ -171,7 +189,7 @@
 ;;; git
 ;; From https://github.com/tsgates/git-emacs
 (require 'vc-git)
-(add-to-list 'load-path (concat (getenv "HOME") "/.emacs.d/git-emacs"))
+(add-to-list 'load-path "~/.emacs.d/danger-emacs/git-emacs")
 (require 'git-emacs)
 
 
@@ -256,7 +274,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Color Theme
 
-(add-to-list 'load-path (expand-file-name "./color-theme-6.6.0"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/danger-emacs/color-theme-6.6.0"))
 (require 'color-theme)
 (eval-after-load "color-theme"
   '(progn
@@ -268,7 +286,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Markdown mode
-(add-to-list 'load-path (expand-file-name "./markdown-mode"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/danger-emacs/markdown-mode"))
 (require 'markdown-mode)
 (add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
 (add-hook 'gfm-mode-hook 'turn-on-auto-fill)
@@ -277,21 +295,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; YAML mode
-(add-to-list 'load-path (expand-file-name "./yaml-mode"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/danger-emacs/yaml-mode"))
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Packages for Emacs
-;;; You can make use of this by doing `M-x package-install [RET] nrepl [RET]`
-;;; You can update your package list by `M-x package-refresh-contents [RET]`
-;;;
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -307,3 +314,7 @@
 ;;; Ruby
 ;;;
 (require 'ruby-mode)
+
+
+
+(provide 'danger-core)

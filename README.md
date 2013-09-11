@@ -3,21 +3,38 @@
 ## Check out this repo
 Clone this repository into your `~/.emacs.d/` directory.  For example
 
-`cd ~/.emacs.d ; git clone ... okl`
+`cd ~/.emacs.d ; git clone git@github.com:okl/danger-emacs.git`
 
-This will clone this content into the `okl` directory.
+This will clone this content into the `danger-emacs` directory.
+
+## Initialize the submodules
+After you check out this repo, from the root level directory run 
+1. `git submodule init`
+2. `git submodule update`
 
 ## Update your `~/.emacs load-path`
 Now add that directory to your loadpath. In your ~/.emacs file add
 
-`(setq load-path (cons (expand-file-name "~/.emacs.d/okl") load-path))`
+```
+(setq load-path (cons (expand-file-name "~/.emacs.d/danger-core") load-path))
+(require 'danger-core)
+```
 
-## Initialize the submodules
-After you check out this repo, from the root level directory run `git submodule init` and `git submodule update`
+Restart emacs.
+When emacs starts up again, it will have errors like:
+
+```
+(file-error "Cannot open load file" "clojure-mode")
+  require(clojure-mode)
+```
+
+That's ok, keep going.
 
 ## Initialize the emacs package manager
 
-* `M-x package-refresh-contents`
+
+* `M-x package-refresh-contents
+`
 
 ### Download packages
 
