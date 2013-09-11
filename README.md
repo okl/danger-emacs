@@ -8,15 +8,19 @@ Clone this repository into your `~/.emacs.d/` directory.  For example
 This will clone this content into the `danger-emacs` directory.
 
 ## Initialize the submodules
-After you check out this repo, from the root level directory run 
-1. `git submodule init`
-2. `git submodule update`
+After you check out this repo, 
 
-## Update your `~/.emacs load-path`
+```
+cd danger-emacs ;
+git submodule init ;
+git submodule update ;
+```
+
+## Update your `~/.emacs` load-path
 Now add that directory to your loadpath. In your ~/.emacs file add
 
 ```
-(setq load-path (cons (expand-file-name "~/.emacs.d/danger-core") load-path))
+(setq load-path (cons (expand-file-name "~/.emacs.d/danger-emacs") load-path))
 (require 'danger-core)
 ```
 
@@ -24,23 +28,32 @@ Restart emacs.
 When emacs starts up again, it will have errors like:
 
 ```
-(file-error "Cannot open load file" "clojure-mode")
-  require(clojure-mode)
+Warning (initialization): An error occurred while loading `/Users/test/.emacs':
+
+File error: Cannot open load file, clojure-mode
+
+To ensure normal operation, you should investigate and remove the
+cause of the error in your initialization file.  Start Emacs with
+the `--debug-init' option to view a complete error backtrace.
 ```
 
 That's ok, keep going.
 
-## Initialize the emacs package manager
+## Install packages through the emacs package manager
 
+```
+M-x package-refresh-contents
+```
+ 
+Then, install the packages specified below. If you add new packages to the repo, make sure to update the lists below.
 
-* `M-x package-refresh-contents
-`
-
-### Download packages
-
-If you add new packages to the repo, make sure to update the lists below.
-
-#### Clojure
+### Clojure
 
 * `M-x package-install [RET] clojure-mode [RET]`
 * `M-x package-install [RET] nrepl [RET]`
+* 
+
+## And you're done!
+
+Restart emacs and it should load with no errors! Feel free to add your own customizations to your `.emacs` and `.emacs.d` directories. As we find things that are good for the whole team, check them in- but create a test user on your local machine and make sure you update these installation steps as required.
+
