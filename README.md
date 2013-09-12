@@ -1,5 +1,9 @@
 # Bootstrap
 
+## Download a copy of emacs
+
+[We use this copy](http://emacsformacosx.com/)
+
 ## Check out this repo
 Clone this repository into your `~/.emacs.d/` directory.  For example
 
