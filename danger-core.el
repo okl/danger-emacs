@@ -51,6 +51,7 @@
 
 (setq column-number-mode t)
 (setq delete-selection-mode t)
+(delete-selection-mode t)
 (setq global-hl-line-mode nil)
 (setq erc-modules
       (quote
