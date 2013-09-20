@@ -7,7 +7,7 @@
      ;; work around possible elpa bug
      (ignore-errors (require 'ruby-compilation))
      (setq ruby-use-encoding-map nil)
-     (add-hook 'ruby-mode-hook 'inf-ruby-keys)
+     (add-hook 'ruby-mode-hook 'inf-ruby-setup-keybindings)
      (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
      (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)
      (define-key ruby-mode-map (kbd "C-c l") "lambda")))
@@ -36,4 +36,4 @@ exec-to-string command, but it works and seems fast"
   (shell-command-to-string (concat "rake " (if (= 0 (length task)) "default" task))))
 
 
-(provide 'ruby-mode)
+(provide 'ruby-danger)
