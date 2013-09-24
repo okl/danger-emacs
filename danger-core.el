@@ -317,6 +317,14 @@
 ;;;
 (require 'ruby-danger)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Uniquify
+;;;
+;;; Changes the naming scheme of buffers so that when multiple files with the
+;;; same name are opened, path information goes into the buffer name instead
+;;; of just <2>, etc.
+(require 'uniquify)
+(setq uniquify-buffer-name-style (quote post-forward))
 
 
 (provide 'danger-core)
