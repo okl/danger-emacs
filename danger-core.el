@@ -27,6 +27,10 @@
 (global-set-key "\C-x\C-a" 'find-file-at-point)
 (global-set-key [(control shift ?s)] 'list-matching-lines)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Turn off "C-z minimizes Emacs" mode
+(global-unset-key [(control z)])
+(global-unset-key [(control x)(control z)])
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Packages for Emacs
