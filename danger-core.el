@@ -15,6 +15,9 @@
 (require 'saveplace)
 (setq save-place-file "~/.emacs.d/saved-places")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Delete trailing whitespace every time you save.
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Specify a new place to store temp files to avoid cluttering up your workspace
