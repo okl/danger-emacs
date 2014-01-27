@@ -333,5 +333,12 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style (quote post-forward))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Graphviz Dot Mode
+;;;
+;;; Taken from
+;;; http://users.skynet.be/ppareit/projects/graphviz-dot-mode/graphviz-dot-mode.html
+(require 'graphviz-dot-mode)
+
 
 (provide 'danger-core)
