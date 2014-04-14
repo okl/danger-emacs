@@ -7,6 +7,3 @@
 [submodule "markdown-mode"]
 	path = markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
-[submodule "vsql-emacs"]
-	path = vsql-emacs
-	url = git@github.com:alamb/Vertica-Emacs-vsql.git
