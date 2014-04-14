@@ -11,6 +11,10 @@
 (bar-cursor-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Default Tab Width
+(setq default-tab-width 4)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Saveplace --  automatically save place in files
 (require 'saveplace)
 (setq save-place-file "~/.emacs.d/saved-places")

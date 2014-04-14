@@ -151,12 +151,12 @@
   "Abbrev table in use in Graphviz Dot mode buffers.")
 (define-abbrev-table 'graphviz-dot-mode-abbrev-table ())
 
-(defcustom graphviz-dot-dot-program "dot"
+(defcustom graphviz-dot-dot-program "/usr/local/bin/dot"
   "*Location of the dot program. This is used by `compile'."
   :type 'string
   :group 'graphviz)
 
-(defcustom graphviz-dot-view-command "doted %s"
+(defcustom graphviz-dot-view-command "/usr/local/bin/doted %s"
   "*External program to run on the buffer. You can use `%s' in this string,
 and it will be substituted by the buffer name."
   :type 'string
