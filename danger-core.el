@@ -344,5 +344,8 @@
 ;;; http://users.skynet.be/ppareit/projects/graphviz-dot-mode/graphviz-dot-mode.html
 (require 'graphviz-dot-mode)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; VSQL
+(load "vsql-emacs/vsql")
 
 (provide 'danger-core)
