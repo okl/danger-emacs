@@ -344,5 +344,10 @@
 ;;; http://users.skynet.be/ppareit/projects/graphviz-dot-mode/graphviz-dot-mode.html
 (require 'graphviz-dot-mode)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; SQL + Mustache syntax highlighting
+(add-to-list 'auto-mode-alist '("\\.sqlstache\\'" . sql-mode))
+(add-hook 'sql-mode-hook 'sql-highlight-ansi-keywords)
+
 
 (provide 'danger-core)
