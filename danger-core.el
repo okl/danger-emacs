@@ -34,6 +34,9 @@
 (global-set-key "\C-x\C-a" 'find-file-at-point)
 (global-set-key [(control shift ?s)] 'list-matching-lines)
 
+(global-set-key (kbd "C-<tab>") 'next-multiframe-window)
+(global-set-key (kbd "C-S-<tab>") 'previous-multiframe-window)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Turn off "C-z minimizes Emacs" mode
 (global-unset-key [(control z)])
