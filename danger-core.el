@@ -93,8 +93,10 @@
              newline empty space-after-tab tab-mark)))
 ;;
 ;; iswitchb = makes C-x b awesome
+;; but now it's deprecated
+;; On to ido-mode!
 ;;
-(iswitchb-mode 1)
+(ido-mode 1)
 ;;
 ;; C-c left undoes window config changes
 ;;
