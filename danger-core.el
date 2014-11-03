@@ -95,8 +95,15 @@
 ;; iswitchb = makes C-x b awesome
 ;; but now it's deprecated
 ;; On to ido-mode!
+;; which *also* makes find-file awesome!
 ;;
 (ido-mode 1)
+;;
+;; auto-complete for meta-x
+;;
+(icomplete-mode 1)
+;;
+;;
 ;;
 ;; C-c left undoes window config changes
 ;;
